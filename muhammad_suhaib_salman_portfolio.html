@@ -1,0 +1,512 @@
+<!--
+Full GitHub Pages-ready portfolio website (TailwindCSS CDN)
+Files contained below. Create a repo named: suhaib200110.github.io
+Place these files at the repository root and push to GitHub. Pages will serve automatically.
+
+Files:
+- index.html
+- about.html
+- projects-ml.html
+- projects-electronics.html
+- certifications.html
+- contact.html
+- assets/js/main.js
+- assets/images/ (placeholders)
+
+Tailwind is used via CDN (no build step). Replace placeholder text, images, and links with your real content.
+-->
+
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Muhammad Suhaib Salman — Electrical Engineering (Electronics) & ML Engineer/Data Scientist</title>
+  <meta name="description" content="Muhammad Suhaib Salman - ML Engineer, Data Scientist & Electronics Engineer. Portfolio showcasing ML/DL, CV, and Electronics projects.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">Muhammad Suhaib Salman</a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="projects-ml.html" class="hover:text-blue-600">ML/DL Projects</a>
+        <a href="projects-electronics.html" class="hover:text-blue-600">Electronics Projects</a>
+        <a href="certifications.html" class="hover:text-blue-600">Certifications</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <button id="mobileBtn" class="md:hidden p-2 rounded hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden bg-white border-t">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="/" class="">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects-ml.html">ML/DL Projects</a>
+        <a href="projects-electronics.html">Electronics Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- Hero -->
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="text-sm text-blue-600 font-medium">Hello, I'm</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Muhammad Suhaib Salman</h1>
+        <p class="mt-3 text-lg text-gray-600">Electrical Engineering (Electronics) • ML Engineer / Data Scientist</p>
+
+        <p class="mt-6 text-gray-700 max-w-xl">I build machine learning and computer vision solutions, deploy data-driven web apps, and design embedded electronics prototypes. Browse my projects, certifications, and contact information below.</p>
+
+        <div class="mt-6 flex gap-4">
+          <a href="projects-ml.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded shadow">View ML/DL Projects</a>
+          <a href="projects-electronics.html" class="inline-block border border-gray-300 px-4 py-2 rounded">Electronics Projects</a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3 text-sm text-gray-600">
+          <div class="bg-white border px-3 py-2 rounded">Python</div>
+          <div class="bg-white border px-3 py-2 rounded">TensorFlow</div>
+          <div class="bg-white border px-3 py-2 rounded">Computer Vision</div>
+          <div class="bg-white border px-3 py-2 rounded">Embedded Systems</div>
+          <div class="bg-white border px-3 py-2 rounded">Streamlit</div>
+        </div>
+
+      </div>
+      <div class="flex items-center justify-center">
+        <!-- Placeholder illustration / image -->
+        <div class="w-72 h-72 bg-gradient-to-br from-blue-100 to-white rounded-xl shadow flex items-center justify-center">
+          <div class="text-center text-gray-500">
+            <p class="text-sm">Your</p>
+            <p class="font-semibold text-lg">Project Showcase</p>
+            <p class="text-xs mt-2">Replace this with your portrait or hero image (assets/images/hero.jpg)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">Featured Projects</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="bg-white border rounded-lg p-4 shadow-sm">
+          <h3 class="font-semibold">Stock Market WebApp</h3>
+          <p class="mt-2 text-sm text-gray-600">Real-time stock forecaster for Pakistani stocks using Streamlit, yfinance and ETS forecasting.</p>
+          <div class="mt-4 flex items-center justify-between text-sm">
+            <div class="text-gray-500">Streamlit</div>
+            <div class="flex gap-2">
+              <a href="https://stock-market-web-suhaib-hamza.streamlit.app/" class="text-blue-600">Live</a>
+              <a href="https://github.com/suhaib200110/Projects" class="text-blue-600">Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="bg-white border rounded-lg p-4 shadow-sm">
+          <h3 class="font-semibold">YOLO-like Vehicle & Parking Detection</h3>
+          <p class="mt-2 text-sm text-gray-600">Parking classification and vehicle detection using custom YOLO-SSAM-inspired model.</p>
+          <div class="mt-4 flex items-center justify-between text-sm">
+            <div class="text-gray-500">TensorFlow</div>
+            <div class="flex gap-2">
+              <a href="https://github.com/suhaib200110/Projects" class="text-blue-600">Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-white border rounded-lg p-4 shadow-sm">
+          <h3 class="font-semibold">Number Plate Detection & Recognition</h3>
+          <p class="mt-2 text-sm text-gray-600">Detection + OCR pipeline for number plate recognition using deep learning and image processing.</p>
+          <div class="mt-4 flex items-center justify-between text-sm">
+            <div class="text-gray-500">OpenCV • TensorFlow</div>
+            <div class="flex gap-2">
+              <a href="https://github.com/suhaib200110/Projects" class="text-blue-600">Repo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="mt-12 bg-gradient-to-r from-blue-50 to-white border rounded-lg p-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="font-semibold text-lg">Want to collaborate?</h3>
+          <p class="text-sm text-gray-600 mt-1">I’m open to part-time roles, collaboration on ML/embedded projects and freelance work.</p>
+        </div>
+        <div>
+          <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+      <div>© 2025 Muhammad Suhaib Salman</div>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a href="https://github.com/suhaib200110" target="_blank">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: about.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Muhammad Suhaib Salman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">Muhammad Suhaib Salman</a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="/">Home</a>
+        <a href="about.html" class="font-medium">About</a>
+        <a href="projects-ml.html">ML/DL Projects</a>
+        <a href="projects-electronics.html">Electronics Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold">About Me</h1>
+    <p class="mt-4 text-gray-700">I am <strong>Muhammad Suhaib Salman</strong>, an Electrical Engineer (Electronics) and Machine Learning Engineer / Data Scientist. I design and deploy ML models, build computer vision systems, and work on embedded systems and IoT prototypes.</p>
+
+    <section class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="bg-white border rounded-lg p-4 shadow-sm">
+        <h3 class="font-semibold">Education</h3>
+        <p class="mt-2 text-sm text-gray-600">Bachelors in Electrical Engineering (Electronics) — Pakistan</p>
+      </div>
+
+      <div class="bg-white border rounded-lg p-4 shadow-sm">
+        <h3 class="font-semibold">Skills</h3>
+        <ul class="mt-2 text-sm text-gray-600 list-disc list-inside">
+          <li>Python, NumPy, Pandas</li>
+          <li>TensorFlow, PyTorch, OpenCV</li>
+          <li>Computer Vision, Object Detection</li>
+          <li>Embedded Systems (ESP32), IoT</li>
+          <li>Streamlit, Flask, Deployment</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold">Experience</h2>
+      <div class="mt-4 space-y-4 text-sm text-gray-700">
+        <div>
+          <div class="font-medium">Remote Data Science Fellowship — Bytewise Limited</div>
+          <div class="text-gray-500">Worked on ML projects and version control, developed models for churn prediction and computer vision tasks.</div>
+        </div>
+
+        <div>
+          <div class="font-medium">Internship — Nescow (8 weeks)</div>
+          <div class="text-gray-500">Built a personalized skincare recommendation system and GUI prototyping using Tkinter.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-gray-600">
+      <div>© 2025 Muhammad Suhaib Salman</div>
+      <div class="flex gap-4">
+        <a href="https://github.com/suhaib200110">GitHub</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: projects-ml.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ML & DL Projects — Muhammad Suhaib Salman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">Muhammad Suhaib Salman</a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects-ml.html" class="font-medium">ML/DL Projects</a>
+        <a href="projects-electronics.html">Electronics Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold">Machine Learning & Deep Learning Projects</h1>
+    <p class="mt-3 text-gray-600">A curated list of ML and DL projects with descriptions, technologies and repository links.</p>
+
+    <section class="mt-6 grid gap-6">
+      <!-- Project Item Template -->
+      <article class="bg-white border rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold text-xl">Bank Churn Prediction</h2>
+        <p class="mt-2 text-gray-600">A predictive model to identify potential customer churn in banking services. Uses Scikit-Learn and feature engineering.</p>
+        <div class="mt-4 flex items-center justify-between text-sm">
+          <div>Python • Scikit-learn • Pandas</div>
+          <div><a href="https://github.com/suhaib200110/Projects/tree/main/Machine%20and%20Deep%20Learning%20Projects/Bank%20Churn%20Prediction" class="text-blue-600">Repository</a></div>
+        </div>
+      </article>
+
+      <article class="bg-white border rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold text-xl">Number Plate Detection & Recognition</h2>
+        <p class="mt-2 text-gray-600">Detector + OCR pipeline for automatic license plate reading using TensorFlow and OpenCV.</p>
+        <div class="mt-4 flex items-center justify-between text-sm">
+          <div>TensorFlow • OpenCV</div>
+          <div><a href="https://github.com/suhaib200110/Projects" class="text-blue-600">Repository</a></div>
+        </div>
+      </article>
+
+      <article class="bg-white border rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold text-xl">Parking Space Classification</h2>
+        <p class="mt-2 text-gray-600">Computer vision system that classifies parking slots as occupied or free using CNNs.</p>
+        <div class="mt-4 flex items-center justify-between text-sm">
+          <div>TensorFlow • Keras</div>
+          <div><a href="https://github.com/suhaib200110/Projects" class="text-blue-600">Repository</a></div>
+        </div>
+      </article>
+
+      <article class="bg-white border rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold text-xl">Stock Market WebApp</h2>
+        <p class="mt-2 text-gray-600">Streamlit app that fetches stock data for PKX-listed companies and forecasts prices using ETS models.</p>
+        <div class="mt-4 flex items-center justify-between text-sm">
+          <div>Streamlit • yfinance • Statsmodels</div>
+          <div><a href="https://stock-market-web-suhaib-hamza.streamlit.app/" class="text-blue-600">Live</a></div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="border-t mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-gray-600">
+      <div>© 2025 Muhammad Suhaib Salman</div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: projects-electronics.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Electronics Projects — Muhammad Suhaib Salman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">Muhammad Suhaib Salman</a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects-ml.html">ML/DL Projects</a>
+        <a href="projects-electronics.html" class="font-medium">Electronics Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold">Electronics & Embedded Projects</h1>
+    <p class="mt-3 text-gray-600">IoT and embedded systems projects, prototypes, and demos.</p>
+
+    <section class="mt-6 grid gap-6">
+      <article class="bg-white border rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold text-xl">Wi‑Fi Enabled Incubator (ESP32)</h2>
+        <p class="mt-2 text-gray-600">An incubator with remote monitoring using ESP32 and DHT11 temperature sensor. Web dashboard and alerts implemented.</p>
+        <div class="mt-4 flex items-center justify-between text-sm">
+          <div>ESP32 • DHT11 • IoT</div>
+          <div><a href="#" class="text-blue-600">Repository</a></div>
+        </div>
+      </article>
+
+      <article class="bg-white border rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold text-xl">Smart Parking Management (Embedded + CV)</h2>
+        <p class="mt-2 text-gray-600">A hybrid system combining edge devices and computer vision to manage parking spots.</p>
+        <div class="mt-4 flex items-center justify-between text-sm">
+          <div>ESP32 • Raspberry Pi • OpenCV</div>
+          <div><a href="#" class="text-blue-600">Repository</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-gray-600">
+      <div>© 2025 Muhammad Suhaib Salman</div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: certifications.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Certifications — Muhammad Suhaib Salman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">Muhammad Suhaib Salman</a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects-ml.html">ML/DL Projects</a>
+        <a href="projects-electronics.html">Electronics Projects</a>
+        <a href="certifications.html" class="font-medium">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold">Certifications</h1>
+    <p class="mt-3 text-gray-600">A list of professional and online certifications.</p>
+    <ul class="mt-6 list-disc list-inside text-gray-700">
+      <li>Machine Learning Specialization — Coursera (Andrew Ng)</li>
+      <li>Deep Learning — Coursera</li>
+      <li>Python for Everybody — University of Michigan</li>
+      <li>Ethical Hacking Internship — (Details)</li>
+    </ul>
+  </main>
+
+  <footer class="border-t mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-gray-600">
+      <div>© 2025 Muhammad Suhaib Salman</div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: contact.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Muhammad Suhaib Salman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold">Muhammad Suhaib Salman</a>
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects-ml.html">ML/DL Projects</a>
+        <a href="projects-electronics.html">Electronics Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html" class="font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold">Contact</h1>
+    <p class="mt-3 text-gray-600">I'd love to hear about opportunities and collaborations. Use the form below or reach me on GitHub/LinkedIn.</p>
+
+    <div class="mt-6 bg-white border rounded-lg p-6 shadow-sm">
+      <!-- Simple static contact form (uses mailto) -->
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label class="block text-sm font-medium">Your name</label>
+        <input class="mt-1 p-2 border rounded w-full" name="name" />
+
+        <label class="block text-sm font-medium mt-4">Email</label>
+        <input class="mt-1 p-2 border rounded w-full" name="email" />
+
+        <label class="block text-sm font-medium mt-4">Message</label>
+        <textarea class="mt-1 p-2 border rounded w-full" rows="5" name="message"></textarea>
+
+        <div class="mt-4 flex gap-2">
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+          <a href="https://github.com/suhaib200110" class="px-4 py-2 border rounded">GitHub</a>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <footer class="border-t mt-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between text-sm text-gray-600">
+      <div>© 2025 Muhammad Suhaib Salman</div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: assets/js/main.js -->
+// Minimal JS for mobile nav toggle and small enhancements
+const mobileBtn = document.getElementById('mobileBtn');
+const mobileNav = document.getElementById('mobileNav');
+if (mobileBtn && mobileNav) {
+  mobileBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'))
+}
+
+// Smooth scroll for internal links (optional)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+
+<!-- DEPLOYMENT INSTRUCTIONS -->
+
+<!--
+1. Create a repository named: suhaib200110.github.io
+2. Add the files above to the repo (index.html, about.html, etc.) maintaining the folder structure (assets/js/main.js)
+3. Push to GitHub. GitHub Pages will publish at: https://suhaib200110.github.io
+4. Replace placeholder images: create assets/images/ and upload hero.jpg and project thumbnails.
+5. Edit contact form email in contact.html (mailto:your-email@example.com).
+6. To use a custom domain, add CNAME file and configure DNS.
+-->
