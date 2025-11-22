@@ -13,16 +13,47 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
         <a href="index.html" class="text-xl font-bold text-blue-600">Portfolio</a>
-        <ul class="flex space-x-6 font-medium">
+    
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 font-medium">
           <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
           <li><a href="about.html" class="hover:text-blue-600">About</a></li>
-          <li><a href="ml-projects.html" class="text-blue-600 font-semibold">ML/DL Projects</a></li>
-          <li><a href="projects-electronics.html" class="hover:text-blue-600 ">Electronics</a></li>
+          <li><a href="ml-projects.html" class="text-blue-600">ML/DL Projects</a></li>
+          <li><a href="projects-electronics.html" class="hover:text-blue-600 font-semibold">Electronics</a></li>
           <li><a href="certifications.html" class="hover:text-blue-600">Certifications</a></li>
           <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
         </ul>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobileBtn" class="md:hidden p-2 rounded hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
+    
+      <!-- Mobile Menu -->
+      <div id="mobileNav" class="md:hidden hidden bg-white border-t">
+        <ul class="px-6 py-4 flex flex-col gap-3">
+          <li><a href="index.html" class="block">Home</a></li>
+          <li><a href="about.html" class="block">About</a></li>
+          <li><a href="ml-projects.html" class="block  font-semibold">ML/DL Projects</a></li>
+          <li><a href="projects-electronics.html" class="block">Electronics</a></li>
+          <li><a href="certifications.html" class="block">Certifications</a></li>
+          <li><a href="contact.html" class="block">Contact</a></li>
+        </ul>
+      </div>
+    
+      <script>
+        const btn = document.getElementById('mobileBtn');
+        const nav = document.getElementById('mobileNav');
+    
+        btn.addEventListener('click', () => {
+          nav.classList.toggle('hidden');
+        });
+      </script>
     </nav>
   
     <!-- Header Section -->
@@ -93,7 +124,9 @@
 
     </div>
   </main>
-
-  <footer class="bg-gray-100 text-center py-6 mt-12 text-gray-600">© 2025 Muhammad Suhaib Salman</footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Muhammad Suhaib Salman. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>

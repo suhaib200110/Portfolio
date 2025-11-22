@@ -8,28 +8,59 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-blue-600">Portfolio</a>
-      <div class="space-x-6 text-lg font-medium">
-        <a href="index.html" class="hover:text-blue-600">Home</a>
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="ml-projects.html" class="hover:text-blue-600">ML Projects</a>
-        <a href="projects-electronics.html" class="hover:text-blue-600">Electronics</a>
-        <a href="certifications.html" class="hover:text-blue-600">Certifications</a>
-        <a href="contact.html" class="text-blue-600 font-semibold">Contact</a>
-      </div>
+      <!-- Logo -->
+      <a href="index.html" class="text-xl font-bold text-blue-600">Portfolio</a>
+  
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+        <li><a href="ml-projects.html" class="hover:text-blue-600">ML/DL Projects</a></li>
+        <li><a href="projects-electronics.html" class="hover:text-blue-600 font-semibold">Electronics</a></li>
+        <li><a href="certifications.html" class="hover:text-blue-600">Certifications</a></li>
+        <li><a href="contact.html" class="text-blue-600">Contact</a></li>
+      </ul>
+  
+      <!-- Mobile Menu Button -->
+      <button id="mobileBtn" class="md:hidden p-2 rounded hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="md:hidden hidden bg-white border-t">
+      <ul class="px-6 py-4 flex flex-col gap-3">
+        <li><a href="index.html" class="block">Home</a></li>
+        <li><a href="about.html" class="block">About</a></li>
+        <li><a href="ml-projects.html" class="block">ML/DL Projects</a></li>
+        <li><a href="projects-electronics.html" class="block">Electronics</a></li>
+        <li><a href="certifications.html" class="block">Certifications</a></li>
+        <li><a href="contact.html" class="block font-semibold">Contact</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      const btn = document.getElementById('mobileBtn');
+      const nav = document.getElementById('mobileNav');
+  
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+      });
+    </script>
   </nav>
 
   <!-- Header -->
   <header class="text-center py-16 bg-gradient-to-r from-blue-600 to-blue-400 text-white">
-    <h1 class="text-4xl font-bold">Get in Touch</h1>
+    <h1 class="text-4xl font-bold my-6">Get in Touch</h1>
     <p class="mt-4 text-lg max-w-2xl mx-auto">Feel free to reach out for collaborations, opportunities, or technical discussions.</p>
   </header>
 
   <!-- Contact Section -->
-  <section class="max-w-4xl mx-auto px-6 py-16">
+  <section class="max-w-4xl mx-auto px-6 py-16 pb-24">
     <div class="grid md:grid-cols-2 gap-12">
 
       <!-- Contact Info -->
@@ -89,8 +120,8 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p>&copy; 2025 Muhammad Suhaib Salman. All Rights Reserved.</p>
+  <footer class="bg-gray-900 text-white py-6 text-center fixed bottom-0 left-0 w-full">
+    &copy; 2025 Muhammad Suhaib Salman. All Rights Reserved.
   </footer>
 </body>
 </html>

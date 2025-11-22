@@ -10,16 +10,47 @@
   <!-- Navbar -->
   <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
       <a href="index.html" class="text-xl font-bold text-blue-600">Portfolio</a>
-      <ul class="flex space-x-6 font-medium">
+  
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 font-medium">
         <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
         <li><a href="about.html" class="hover:text-blue-600">About</a></li>
         <li><a href="ml-projects.html" class="hover:text-blue-600">ML/DL Projects</a></li>
-        <li><a href="electronics.html" class="text-blue-600 font-semibold">Electronics</a></li>
+        <li><a href="projects-electronics.html" class="text-blue-600 font-semibold">Electronics</a></li>
         <li><a href="certifications.html" class="hover:text-blue-600">Certifications</a></li>
         <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
       </ul>
+  
+      <!-- Mobile Menu Button -->
+      <button id="mobileBtn" class="md:hidden p-2 rounded hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="md:hidden hidden bg-white border-t">
+      <ul class="px-6 py-4 flex flex-col gap-3">
+        <li><a href="index.html" class="block">Home</a></li>
+        <li><a href="about.html" class="block">About</a></li>
+        <li><a href="ml-projects.html" class="block">ML/DL Projects</a></li>
+        <li><a href="projects-electronics.html" class="block font-semibold">Electronics</a></li>
+        <li><a href="certifications.html" class="block">Certifications</a></li>
+        <li><a href="contact.html" class="block">Contact</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      const btn = document.getElementById('mobileBtn');
+      const nav = document.getElementById('mobileNav');
+  
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+      });
+    </script>
   </nav>
 
   <!-- Header Section -->
@@ -61,6 +92,118 @@
         <p class="text-gray-700 mb-4">Simulated various control systems including motor control, relay logic, and PLC‑based automation systems.</p>
         <p class="text-gray-700"><strong>Technologies:</strong> Proteus, Logix Pro, PLC</p>
       </div>
+
+      <!-- Add this small CSS anywhere in your <style> tag or inside the <head> -->
+<style>
+  .hover-zoom-container {
+    position: relative;
+  }
+  .hover-zoom-container:hover .hover-zoom-preview {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+
+<!-- Project 5 -->
+<div class="bg-white shadow-md rounded-xl p-6 border border-gray-200 hover:shadow-lg transition relative overflow-visible">
+<!-- Text Section -->
+<h3 class="text-2xl font-semibold text-blue-600 mb-3">
+  PIC18F452 With LM35 Temperature Sensor + Clock
+</h3>
+
+<p class="text-gray-700 mb-4">
+  Built a temperature monitoring system using the PIC18F452 microcontroller and an LM35 temperature sensor...
+</p>
+
+<p class="text-gray-700">
+  <strong>Technologies:</strong> (Simulation) Proteus, Keil
+</p>
+
+  <!-- Image Grid Section -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4 overflow-visible">
+
+    <!-- Image Container -->
+    <div class="relative w-full h-40 rounded-lg overflow-hidden group overflow-visible">
+
+      <!-- Small Image -->
+      <img src="ElectricalProjects/TempSensor.PNG"
+           alt="Image 1"
+           class="w-full h-full object-cover rounded-lg">
+
+      <!-- Pop-out Large Image -->
+      <img src="ElectricalProjects/TempSensor.PNG"
+      class="absolute top-1/2 left-1/2 
+      md:w-[500px] max-w-none 
+      md:h-[500px]
+
+      sm:w-[600px] max-w-none 
+      sm:h-[600px]
+      
+      w-[500px] max-w-none 
+      h-[500px]
+      
+      object-contain rounded-xl 
+      scale-0 group-hover:scale-100 
+      -translate-x-1/2 -translate-y-1/2
+      transition-transform duration-300 
+      z-50 pointer-events-none shadow-2xl"
+>
+    </div>
+
+    <!-- Image 2 -->
+    <div class="relative w-full h-40 rounded-lg overflow-hidden group overflow-visible">
+      <img src="ElectricalProjects/Clock.PNG"
+           alt="Image 2"
+           class="w-full h-full object-cover rounded-lg">
+
+      <img src="ElectricalProjects/Clock.PNG"
+           class="absolute top-1/2 left-1/2 
+           md:w-[600px] max-w-none 
+           md:h-[600px]
+     
+           sm:w-[600px] max-w-none 
+           sm:h-[600px]
+           
+           w-[600px] max-w-none 
+           h-[600px]
+           
+           object-contain rounded-xl 
+           scale-0 group-hover:scale-100 
+           -translate-x-1/2 -translate-y-1/2
+           transition-transform duration-300 
+           z-50 pointer-events-none shadow-2xl">
+    </div>
+
+    <!-- Image 3 -->
+    <div class="relative w-full h-40 rounded-lg overflow-hidden group overflow-visible">
+      <img src="ElectricalProjects/pic18_hardware.gif"
+           alt="Image 3"
+           class="w-full h-full object-cover rounded-lg">
+
+      <img src="ElectricalProjects/pic18_hardware.gif"
+           class="absolute top-1/2 left-1/2 
+           md:w-[600px] max-w-none 
+           md:h-[600px]
+     
+           sm:w-[600px] max-w-none 
+           sm:h-[600px]
+           
+           w-[600px] max-w-none 
+           h-[600px]
+           
+           object-contain rounded-xl 
+           scale-0 group-hover:scale-100 
+           -translate-x-1/2 -translate-y-1/2
+           transition-transform duration-300 
+           z-50 pointer-events-none shadow-2xl">
+    </div>
+
+  </div>
+
+  
+</div>
+
+
 
     </div>
   </section>
